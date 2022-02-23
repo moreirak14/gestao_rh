@@ -6,3 +6,5 @@ gestao_rh/__pycache__/
 .idea
 *.sqlite3
 venv
+
+*.pem
