@@ -27,9 +27,7 @@ SECRET_KEY = "django-insecure-jm__y^c(&m8c$1kr)-m27v!obbuzpy!!u!sz74^i@28h@+l)zv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
-
-CORS_ALLOW_ALL_ORIGINS = True
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -141,3 +139,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "login"
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8085",
+    "http://127.0.0.1:8085",
+    "http://192.168.0.135:8085",
+]
