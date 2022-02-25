@@ -8,3 +8,5 @@ gestao_rh/__pycache__/
 venv
 
 *.pem
+
+connect-ssh-aws.txt
