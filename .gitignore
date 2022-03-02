@@ -6,7 +6,7 @@ gestao_rh/__pycache__/
 .idea
 *.sqlite3
 venv
+static
 
-*.pem
-
+gestao_rh.pem
 connect-ssh-aws.txt
