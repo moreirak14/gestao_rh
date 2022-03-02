@@ -21,11 +21,13 @@ from django.urls import path, include
 from rest_framework import routers
 from apps.core import views
 from apps.funcionarios.api.views import FuncionarioViewSet
+from apps.registro_hora_extra.api.views import RegistroHoraExtraViewSet
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
-router.register(r'api/funcionarios', FuncionarioViewSet)
+router.register(r"users", views.UserViewSet)
+router.register(r"groups", views.GroupViewSet)
+router.register(r"api/funcionarios", FuncionarioViewSet)
+router.register(r"api/banco-horas", RegistroHoraExtraViewSet)
 
 
 urlpatterns = [
@@ -37,8 +39,7 @@ urlpatterns = [
     path("hora-extras/", include("apps.registro_hora_extra.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
     path("admin/", admin.site.urls),
-
-    path('', include(router.urls)),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    path("", include(router.urls)),
+    path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
