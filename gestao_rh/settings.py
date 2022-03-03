@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "bootstrapform",
     "corsheaders",
     "rest_framework",
+    "rest_framework.authtoken",
 ]
 
 MIDDLEWARE = [
