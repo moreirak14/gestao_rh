@@ -14,4 +14,3 @@ class FuncionarioViewSet(viewsets.ModelViewSet):
     serializer_class = FuncionarioSerializer
     authentication_classes = (TokenAuthentication,)
     permission_classes = [IsAuthenticated]
-
